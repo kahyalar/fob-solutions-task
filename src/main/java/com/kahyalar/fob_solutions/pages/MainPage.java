@@ -1,11 +1,9 @@
 package com.kahyalar.fob_solutions.pages;
 
 import com.kahyalar.fob_solutions.base.BasePage;
-import com.kahyalar.fob_solutions.constants.MainPageConstants;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 
-import static com.kahyalar.fob_solutions.constants.BasePageConstants.MENU_BUTTON;
 import static com.kahyalar.fob_solutions.constants.BasePageConstants.SETTINGS_BUTTON;
 
 /**

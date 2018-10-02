@@ -1,19 +1,11 @@
 package com.kahyalar.fob_solutions.base;
 
-import com.kahyalar.fob_solutions.pages.MainPage;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
-import io.appium.java_client.android.AndroidDriver;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.io.File;
-import java.net.URISyntaxException;
-import java.net.URL;
 import java.util.List;
 
 import static com.kahyalar.fob_solutions.constants.BasePageConstants.MENU_BUTTON;
@@ -74,11 +66,11 @@ public class BasePage {
         }
     }
 
-    public void clickToMenu(){
+    protected void clickToMenu(){
         clickTo(MENU_BUTTON);
     }
 
-    public void checkStudyInfoIsVisible(){
+    protected void checkStudyInfoIsVisible(){
         Assert.assertTrue("Study Info button should be visible, but now it's hidden!", isExist(STUDY_INFO_BUTTON));
     }
 }

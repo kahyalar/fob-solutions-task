@@ -1,7 +1,6 @@
 package com.kahyalar.fob_solutions.pages;
 
 import com.kahyalar.fob_solutions.base.BasePage;
-import com.kahyalar.fob_solutions.constants.WelcomePageConstants;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 

@@ -17,7 +17,7 @@ import static com.kahyalar.fob_solutions.constants.BasePageConstants.STUDY_INFO_
 public class BasePage {
     protected AppiumDriver<MobileElement> driver;
     private WebDriverWait wait;
-    private final int ELEMENT_MAX_WAIT = 50;
+    private final int ELEMENT_MAX_WAIT = 5;
     private final int ELEMENT_SEARCH_SLEEP = 1000;
 
     public BasePage(AppiumDriver<MobileElement> driver) {
@@ -72,5 +72,10 @@ public class BasePage {
 
     protected void checkStudyInfoIsVisible(){
         Assert.assertTrue("Study Info button should be visible, but now it's hidden!", isExist(STUDY_INFO_BUTTON));
+    }
+
+    protected void restart(){
+        driver.closeApp();
+        driver.launchApp();
     }
 }

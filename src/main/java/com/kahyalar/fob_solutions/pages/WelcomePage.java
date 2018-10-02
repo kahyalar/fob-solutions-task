@@ -5,6 +5,7 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 
 import static com.kahyalar.fob_solutions.constants.WelcomePageConstants.GUEST_BUTTON;
+import static com.kahyalar.fob_solutions.constants.WelcomePageConstants.LOCAL_STUDENT_BUTTON;
 
 /**
  * Created by kahyalar on 2.10.2018.
@@ -24,6 +25,13 @@ public class WelcomePage extends BasePage {
     public MainPage loginAsGuest(){
         if(isExist){
             clickTo(GUEST_BUTTON);
+        }
+        return new MainPage(driver);
+    }
+
+    public MainPage loginAsLocal(){
+        if(isExist){
+            clickTo(LOCAL_STUDENT_BUTTON);
         }
         return new MainPage(driver);
     }

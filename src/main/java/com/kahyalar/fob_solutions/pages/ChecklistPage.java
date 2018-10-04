@@ -26,8 +26,7 @@ public class ChecklistPage extends BasePage {
 
     public ChecklistPage checkIsFirstItemChecked(){
         List<MobileElement> list = findElements(CHECKLIST_ITEM);
-        String value = list.get(0).getAttribute("checked");
-        Assert.assertTrue("Checked Item should be stay checked!", value.equals("true"));
+        Assert.assertTrue("Checked Item should be stay checked!", isChecked(list.get(0)));
         return this;
     }
 

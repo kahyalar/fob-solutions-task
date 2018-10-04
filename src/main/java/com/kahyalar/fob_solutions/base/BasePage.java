@@ -16,7 +16,6 @@ import static com.kahyalar.fob_solutions.constants.BasePageConstants.STUDY_INFO_
  */
 public class BasePage {
     protected AppiumDriver<MobileElement> driver;
-    private WebDriverWait wait;
     private final int ELEMENT_MAX_WAIT = 5;
     private final int ELEMENT_SEARCH_SLEEP = 1000;
 
@@ -50,13 +49,17 @@ public class BasePage {
         return driver.findElements(by);
     }
 
+    protected List<MobileElement> findElementsExist(By by){
+        return driver.findElements(by);
+    }
+
     protected void clickTo(By by){
         waitUntilClickable(by);
         findElement(by).click();
     }
 
     protected boolean isExist(By by){
-        if (findElements(by).isEmpty()){
+        if (findElementsExist(by).isEmpty()){
             System.out.println("Item not found!");
             return false;
         }
@@ -66,16 +69,22 @@ public class BasePage {
         }
     }
 
+    protected void clickXTimes(MobileElement element, int times){
+        for (int i = 1; i <= times; i++) {
+            element.click();
+        }
+    }
+
+    protected boolean isChecked(MobileElement element){
+        String value = element.getAttribute("checked");
+        return value.equals("true");
+    }
+
     protected void clickToMenu(){
         clickTo(MENU_BUTTON);
     }
 
     protected void checkStudyInfoIsVisible(){
         Assert.assertTrue("Study Info button should be visible, but now it's hidden!", isExist(STUDY_INFO_BUTTON));
-    }
-
-    protected void restart(){
-        driver.closeApp();
-        driver.launchApp();
     }
 }

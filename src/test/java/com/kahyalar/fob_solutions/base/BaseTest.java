@@ -15,12 +15,14 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 public class BaseTest {
     protected static AndroidDriver<MobileElement> driver;
     protected static DesiredCapabilities capabilities = new DesiredCapabilities();
+    private String udid = System.getProperty("udid");
 
     @Before
     public void startUp(){
         capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
         capabilities.setCapability("appPackage", "ee.taltech.android");
         capabilities.setCapability("appActivity", "ee.taltech.android.activities.StartActivity_");
+        capabilities.setCapability(MobileCapabilityType.UDID, udid);
         capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "8.0");
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "device");
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID);

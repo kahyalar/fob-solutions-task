@@ -37,6 +37,12 @@ public class TestCases extends BaseTest{
 
     @Test
     public void isCalendarRedirectsToEvent(){
-        
+        new WelcomePage(driver)
+                .checkForFirstTime()
+                .loginAsLocal()
+                .checkFieldsIsVisible()
+                .goToDecemberMonth()
+                .clickToEventDate()
+                .checkEventIsVisible();
     }
 }

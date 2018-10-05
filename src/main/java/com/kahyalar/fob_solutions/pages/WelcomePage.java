@@ -11,28 +11,17 @@ import static com.kahyalar.fob_solutions.constants.WelcomePageConstants.LOCAL_ST
  * Created by kahyalar on 2.10.2018.
  */
 public class WelcomePage extends BasePage {
-    private boolean isExist;
-
     public WelcomePage(AppiumDriver<MobileElement> driver) {
         super(driver);
     }
 
-    public WelcomePage checkForFirstTime(){
-        isExist = isExist(GUEST_BUTTON);
-        return this;
-    }
-
     public MainPage loginAsGuest(){
-        if(isExist){
-            clickTo(GUEST_BUTTON);
-        }
+        clickTo(GUEST_BUTTON);
         return new MainPage(driver);
     }
 
     public MainPage loginAsLocal(){
-        if(isExist){
-            clickTo(LOCAL_STUDENT_BUTTON);
-        }
+        clickTo(LOCAL_STUDENT_BUTTON);
         return new MainPage(driver);
     }
 }

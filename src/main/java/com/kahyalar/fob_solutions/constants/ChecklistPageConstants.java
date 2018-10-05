@@ -7,4 +7,5 @@ import org.openqa.selenium.By;
  */
 public interface ChecklistPageConstants {
     By CHECKLIST_ITEM = By.id("ee.taltech.android:id/checklistItemCheckBox");
+    By CHECKLIST_TITLE = By.xpath("//*[@text=\"Start of the school year checklist\"]");
 }

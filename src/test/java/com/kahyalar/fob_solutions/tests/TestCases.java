@@ -1,7 +1,6 @@
 package com.kahyalar.fob_solutions.tests;
 
 import com.kahyalar.fob_solutions.base.BaseTest;
-import com.kahyalar.fob_solutions.pages.MainPage;
 import com.kahyalar.fob_solutions.pages.WelcomePage;
 import org.junit.Test;
 
@@ -13,10 +12,10 @@ public class TestCases extends BaseTest{
     @Test
     public void isStudyInfoVisibleAfterRoleChanging() {
         new WelcomePage(driver)
-                .checkForFirstTime()
                 .loginAsGuest()
                 .clickToMenuButton()
                 .goToSettingsPage()
+                .checkIsSettingsPage()
                 .pressSelectRoleButton()
                 .selectLocalStudent()
                 .clickToMenuButton()
@@ -26,19 +25,20 @@ public class TestCases extends BaseTest{
     @Test
     public void isCheckedItemsStaysCheckedAfterRestart(){
         new WelcomePage(driver)
-                .checkForFirstTime()
                 .loginAsLocal()
                 .goToChecklistPage()
+                .checkIsCheckListPage()
                 .checkFirstItem()
                 .goToMainPage()
+                .checkIsMainPage()
                 .goToChecklistPage()
+                .checkIsCheckListPage()
                 .checkIsFirstItemChecked();
     }
 
     @Test
     public void isCalendarRedirectsToEvent(){
         new WelcomePage(driver)
-                .checkForFirstTime()
                 .loginAsLocal()
                 .checkFieldsIsVisible()
                 .goToDecemberMonth()

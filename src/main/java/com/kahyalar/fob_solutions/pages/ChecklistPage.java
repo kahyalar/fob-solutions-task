@@ -8,6 +8,7 @@ import org.junit.Assert;
 import java.util.List;
 
 import static com.kahyalar.fob_solutions.constants.ChecklistPageConstants.CHECKLIST_ITEM;
+import static com.kahyalar.fob_solutions.constants.ChecklistPageConstants.CHECKLIST_TITLE;
 import static com.kahyalar.fob_solutions.constants.MainPageConstants.TAB_BAR;
 
 /**
@@ -34,5 +35,10 @@ public class ChecklistPage extends BasePage {
         List<MobileElement> list = findElement(TAB_BAR).findElementsByClassName("android.widget.ImageView");
         list.get(0).click();
         return new MainPage(driver);
+    }
+
+    public ChecklistPage checkIsCheckListPage(){
+        Assert.assertTrue("'Start of the school year checklist' should be visible at this moment!", isExist(CHECKLIST_TITLE));
+        return this;
     }
 }

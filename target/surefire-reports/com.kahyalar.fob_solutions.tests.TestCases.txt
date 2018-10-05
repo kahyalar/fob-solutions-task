@@ -1,11 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.kahyalar.fob_solutions.tests.TestCases
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 85.258 sec <<< FAILURE! - in com.kahyalar.fob_solutions.tests.TestCases
-isCalendarRedirectsToEvent(com.kahyalar.fob_solutions.tests.TestCases)  Time elapsed: 27.056 sec  <<< FAILURE!
-java.lang.AssertionError: Button's checked value should be false at this moment!
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.assertTrue(Assert.java:41)
-	at com.kahyalar.fob_solutions.pages.MainPage.clickToEventDate(MainPage.java:54)
-	at com.kahyalar.fob_solutions.tests.TestCases.isCalendarRedirectsToEvent(TestCases.java:45)
-
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 89.394 sec - in com.kahyalar.fob_solutions.tests.TestCases

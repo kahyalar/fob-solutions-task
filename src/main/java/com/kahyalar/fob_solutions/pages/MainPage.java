@@ -1,7 +1,6 @@
 package com.kahyalar.fob_solutions.pages;
 
 import com.kahyalar.fob_solutions.base.BasePage;
-import com.kahyalar.fob_solutions.constants.MainPageConstants;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import org.junit.Assert;
@@ -10,7 +9,6 @@ import java.util.List;
 
 import static com.kahyalar.fob_solutions.constants.BasePageConstants.SETTINGS_BUTTON;
 import static com.kahyalar.fob_solutions.constants.MainPageConstants.*;
-import static com.kahyalar.fob_solutions.constants.WelcomePageConstants.LOCAL_STUDENT_BUTTON;
 
 /**
  * Created by kahyalar on 2.10.2018.
@@ -72,6 +70,11 @@ public class MainPage extends BasePage  {
     public void checkEventIsVisible(){
         waitAnimation();
         Assert.assertTrue("23 December 2018 should be visible at this moment!", isExist(EVENT_DATE));
+    }
+
+    public MainPage checkIsMainPage(){
+        Assert.assertTrue("Calendar title should be visible at this moment!", isExist(CALENDAR_TITLE));
+        return this;
     }
 
     private void waitAnimation(){

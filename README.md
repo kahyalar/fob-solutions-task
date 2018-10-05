@@ -37,8 +37,8 @@
 * 23rd of December's 'checked' value should be true and related event should be visible on page
 
 # Usage
-1-) Clone the project and go to root folder which is pom.xml located
-2-) Install .apk to phone with 'adb install /path/to/app.apk' command. APK file is located in /src/main/resources/ttu.apk
-3-) You can run all tests with 'mvn test -Dudid=<<UDID_OF_ANDROID_DEVICE>>' command. UDID can be obtain with 'adb devices' command
-4-) If you want to run a specific test method use 'mvn test -Dudid=<<UDID_OF_ANDROID_DEVICE>> -Dtest="TestCases#<<TEST_METHOD_FROM_SCENARIOS>>'
-Ex. mvn test -Dudid=123456789 -Dtest="TestCases#isStudyInfoVisibleAfterRoleChanging"
+1. Clone the project and go to root folder which is pom.xml located
+2. Install .apk to phone with `adb install /path/to/app.apk` command. APK file is located in `/src/main/resources/ttu.apk`
+3. You can run all tests with `mvn test -Dudid=<<UDID_OF_ANDROID_DEVICE>>` command. UDID can be obtain with `adb devices` command
+4. If you want to run a specific test method use `mvn test -Dudid=<<UDID_OF_ANDROID_DEVICE>> -Dtest="TestCases#<<TEST_METHOD_FROM_SCENARIOS>>"`
+* Ex. `mvn test -Dudid=123456789 -Dtest="TestCases#isStudyInfoVisibleAfterRoleChanging"`

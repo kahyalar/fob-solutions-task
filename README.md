@@ -11,6 +11,18 @@
 * Appium
 * JUnit
 
+# TODOs
+
+- [ ] Assertion messages will change hardcoded to functional one.
+- [ ] Static wait method will replased with dynamic one.
+- [ ] Variables should be static.
+- [ ] Test cases class should be renamed - test class should have correct name that shows what feature test cases are inside that file.
+- [ ] Assertion should be done within tests.
+- [ ] APK file should be in tests resources.
+- [ ] Constants will be rewriting according to POM Pattern.
+- [ ] Test cases class should be renamed - test class should have correct name that shows what feature test cases are inside that file.
+- [ ] Test method's code will rewrite according to POM Pattern.
+
 # Scenarios
 
 1-) isStudyInfoVisibleAfterRoleChanging

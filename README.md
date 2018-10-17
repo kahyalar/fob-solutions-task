@@ -13,12 +13,12 @@
 
 # TODOs
 
+- [x] APK file should be in tests resources.
 - [ ] Assertion messages will change hardcoded to functional one.
 - [ ] Static wait method will replased with dynamic one.
 - [ ] Variables should be static.
 - [ ] Test cases class should be renamed - test class should have correct name that shows what feature test cases are inside that file.
 - [ ] Assertion should be done within tests.
-- [ ] APK file should be in tests resources.
 - [ ] Constants will be rewriting according to POM Pattern.
 - [ ] Test cases class should be renamed - test class should have correct name that shows what feature test cases are inside that file.
 - [ ] Test method's code will rewrite according to POM Pattern.
@@ -50,7 +50,7 @@
 
 # Usage
 1. Clone the project and go to root folder which is pom.xml located
-2. Install .apk to phone with `adb install /path/to/app.apk` command. APK file is located in `/src/main/resources/ttu.apk`
+2. Install .apk to phone with `adb install /path/to/app.apk` command. APK file is located in `/src/test/resources/ttu.apk`
 3. You can run all tests with `mvn test -Dudid=<<UDID_OF_ANDROID_DEVICE>>` command. UDID can be obtain with `adb devices` command
 4. If you want to run a specific test method use `mvn test -Dudid=<<UDID_OF_ANDROID_DEVICE>> -Dtest="TestCases#<<TEST_METHOD_FROM_SCENARIOS>>"`
 * Ex. `mvn test -Dudid=123456789 -Dtest="TestCases#isStudyInfoVisibleAfterRoleChanging"`
